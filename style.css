@@ -15,23 +15,79 @@ Text Domain: uncode
 }
 
 h1 {
-  color: #183762;
   font-weight: 100;
+  color: #183762;
   line-height: 0.8;
+}
+
+h1::selection {
+  background: blue;
+  color: #f4f4f4;
 }
 
 h3 {
   font-weight: 100;
   line-height: 0.4;
+  margin-bottom: 48px;
 }
 
 h4 {
   color: #183762;
 }
 
+h4::selection {
+  background: blue;
+  color: #f4f4f4;
+}
+
 p {
   color: #f4f4f4;
-  line-height: 0.25;
+}
+
+.footer .uncode_text_column a {
+  border-bottom: 1px solid;
+  color: #f4f4f4 ;
+  padding-bottom: 3px;
+  margin-bottom: 1px;
+}
+
+.footer h3 {
+  color: #f4f4f4;
+  font-weight: 100;
+  line-height: 0.2;
+}
+
+.footer h3:first-of-type {
+  padding-top: 27px;
+}
+
+.footer h3:last-of-type {
+  padding-bottom: 9px;
+}
+
+.footer p {
+  color: #f4f4f4;
+  line-height: 0.5;
+}
+
+.footer p:first-of-type {
+  margin-top: 48px;
+}
+
+.footer .icon-row {
+  padding-top: 9px;
+}
+
+.footer .uncont .uncode_text_column:nth-of-type(3) {
+  position: absolute;
+  bottom: 2.5em;
+  left: 2.5em;
+}
+
+.footer-scroll-top i.btn-default {
+  border-color: #173664;
+  border-radius: 0px;
+  color: #173664 !important;
 }
 
 .hero-text {
@@ -51,13 +107,26 @@ p {
   background-color: transparent;
 }
 
+.instagram .column-background {
+  background: -moz-linear-gradient(top, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 25%, rgba(0,0,0,0) 99%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0) 25%,rgba(0,0,0,0) 99%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0) 25%,rgba(0,0,0,0) 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#99000000', endColorstr='#00000000',GradientType=0 );
+  pointer-events: none;
+  z-index: 2;
+}
+
+.instagram .column-background .block-bg-overlay{
+  background-color: transparent;  
+}
+
 .learn-more.btn-default{
   border: none;
   color: #183762 !important;
-  font-size: 16px;
+  font-size: 22px;
   letter-spacing: 1px;
   margin: -18px 0px 0px 0px;
-  padding: 0px 0px 18px 0px !important;
+  padding: 18px 0px 0px 0px !important;
   text-align: left;
   width: 100%;
 }
@@ -66,6 +135,8 @@ p {
   color: #dc2f2e !important;
   margin: -12px 0px 0px 0px;
 }
+
+/* IMPORTED SO FAR TO SCSS */
 
 .learn-more:after {
   background: #183762;
@@ -88,23 +159,36 @@ p {
   width: 85%;
 }
 
-.logo-container {
-  height: 150px;
-  margin-bottom: -100px;
+.learn-more-footer {
+  margin-top: -10px;
 }
 
+.learn-more-footer a {
+  color: white;
+  text-decoration: underline;
+}
+
+
+
+
+
+
 .main-container .row-container .row-parent .single-internal-gutter .uncont >  .hero-image {
-  margin-top: -82px;
+  margin-top: -80px;
 }
 
 .main-text {
   margin-top: -80px;
   padding-top: 120px;
+  padding-bottom: 40px;
 }
 
 .main-text h3 {
   color: #f4f4f4;
-  margin-bottom: 36px;
+}
+
+.main-text p{
+  padding-left: 3px;
 }
 
 .main-text ul {
@@ -114,33 +198,56 @@ p {
 .main-text ul > li {
   color: white;
   line-height: 1.3;
+  padding-left: 5px;
 }
 
-#menu-primary-menu > li {
+#menu-primary-menu {
+  padding-left: 75px;
   text-transform: lowercase;
 }
 
+#menu-primary-menu > li:last-of-type{
+  float: right;
+}
+
+#menu-primary-menu > li:last-of-type > a {
+  color: #a3aebc;
+}
+
+#sb_instagram > .sb_instagram_header {
+  position: absolute;
+  z-index: 4;
+  padding-left: 10px !important;
+  padding-top: 10px !important; 
+}
+
+#sb_instagram > .sb_instagram_header > a > .sbi_header_text > p {
+  display: none;
+}
+
+#sb_instagram > .sb_instagram_header > a > .sbi_header_text > h3 {
+  margin-top: 10px !important;
+}
+
 .secondary-text {
+  padding: 40px 0px;
 }
 
 .secondary-text h3 {
   color: #183762;
-  margin-bottom: 36px;
 }
 
 .secondary-text p {
   color: #183762;
-  line-height: 0.25;
+  line-height: 0.5;
 }
 
 .warranty-text h3 {
   color: #f4f4f4;
-  margin-bottom: 36px;
 }
 
 .warranty-text p {
   color: #f4f4f4;
-  line-height: 0.25;
 }
 
 @media (max-width: 959px){
@@ -156,7 +263,7 @@ p {
 
 /*--- STYLING FOR TOP RIGHT BANNER ---*/
 
-.free-wrap .text {
+/*.free-wrap .text {
   font-size: 20px;
   font-weight: 100;
   line-height: 1.2;
@@ -168,28 +275,41 @@ p {
 }
 
 .free-wrap {
+  cursor: pointer;
   display: table;
   color: #fff;
-  background: #e34117;
+  background: #de2d26;
   width: 80px;
   height: 80px;
-  position: relative;
+  position: fixed;
   text-align: center;
   -webkit-transform: rotate(-22.5deg);
           transform: rotate(-22.5deg);
   text-transform: uppercase;
   font-weight: bold;
   font-size: 1px;
+  transition: 0.6s;
 }
+
 .free-wrap.free-wrap-large {
-  float: right;
-  right: 36px;
-  bottom: 111px;
+  top: 90px;
+  right: 60px;
   z-index: 3000;
   width: 140px;
   height: 140px;
   line-height: 1.1;
 }
+
+.free-wrap.moving-up,
+.free-wrap-large.moving-up {
+  top: 120px;
+}
+
+.free-wrap.moving-down,
+.free-wrap-large.moving-down {
+  top: 60px;
+}
+
 .free-wrap .background,
 .free-wrap .background2 {
   width: 100%;
@@ -211,9 +331,16 @@ p {
   left: 0;
   height: inherit;
   width: inherit;
-  background: #e34117;
+  background: #de2d26;
   z-index: -1;
+  transition: 1s;
 }
+
+.free-wrap:hover {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
 .free-wrap:before {
   -webkit-transform: rotate(12.5deg);
           transform: rotate(12.5deg);
@@ -238,6 +365,7 @@ p {
   -webkit-transform: rotate(75deg);
           transform: rotate(75deg);
 }
+
 .free-wrap .v-wrap {
   display: table-cell;
   vertical-align: middle;
@@ -248,3 +376,4 @@ p {
   width: 95%;
   max-width: 95%;
 }
+*/
